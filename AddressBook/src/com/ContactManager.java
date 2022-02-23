@@ -44,5 +44,16 @@ public class ContactManager {
         contact.setZip(ScannerUtil.getInt("Enter new Zip code: "));
     }
 
+    public void deleteContact(String name) {
+        for (Contact contact : contactList) {
+            if (name.equals(contact.firstName)) {
+                contactList.remove(contact);
+                System.out.println("Contact removed successfully.");
+                break;
+            } else {
+                System.out.println("Contact nor found");
+            }
+        }
+    }
 
 }
